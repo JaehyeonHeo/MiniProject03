@@ -1,2 +1,3 @@
 # MiniProject_MRP
-미니프로젝트03. 생산관리 프로그램 만들기
+공정관리 with RaspberryPi
+
