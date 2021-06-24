@@ -9,7 +9,7 @@ namespace MRPApp.Logic
     public class DataAccess
     {
         // settings 테이블에서 데이터 가져오기
-        internal static List<Settings> GetSettings()
+        public static List<Settings> GetSettings()
         {
             List<MRPAPP.Model.Settings> settings;
 
