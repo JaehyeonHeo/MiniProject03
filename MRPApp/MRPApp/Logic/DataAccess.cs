@@ -39,6 +39,7 @@ namespace MRPApp.Logic
             }
         }
 
+        // Schedules 테이블에서 데이터 가져오기
         internal static List<Schedules> GetSchedules()
         {
             List<MRPAPP.Model.Schedules> list;
@@ -49,12 +50,34 @@ namespace MRPApp.Logic
             return list;
         }
 
+        // Schedule 테이블에 데이터 입력/수정
         internal static int SetSchedule(Schedules item)
         {
             using (var ctx = new MRPEntities())
             {
                 ctx.Schedules.AddOrUpdate(item); // INSERT or update
                 return ctx.SaveChanges(); // commit
+            }
+        }
+
+        // Process 테이블에서 데이터 가져오기
+        internal static List<Process> GetProcess()
+        {
+            List<MRPAPP.Model.Process> list;
+
+            using (var ctx = new MRPEntities())
+                list = ctx.Process.ToList(); //SELECT
+
+            return list;
+        }
+
+        // Process 테이블에 데이터 입력/수정
+        internal static int SetProcess(Process item)
+        {
+            using (var ctx = new MRPEntities())
+            {
+                ctx.Process.AddOrUpdate(item);  // INSERT | UPDATE
+                return ctx.SaveChanges();       // COMMIT
             }
         }
     }

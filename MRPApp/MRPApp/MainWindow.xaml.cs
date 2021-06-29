@@ -38,7 +38,8 @@ namespace MRPApp
         {
             
             // 화면 헤더 오른쪽에 어느 공장에서 로그인 했는지 표시
-            Commons.PLANTCODE = ConfigurationManager.AppSettings["PlantCode"];
+            Commons.PLANTCODE = ConfigurationManager.AppSettings["PlantCode"];    // 위 아래 같은방식,다른표기
+            Commons.FACILITYID = ConfigurationManager.AppSettings.Get("FacilityID");
             try
             {
                 var plantName = Logic.DataAccess.GetSettings().Where(c => c.BasicCode.Equals(Commons.PLANTCODE)).FirstOrDefault().CodeName;

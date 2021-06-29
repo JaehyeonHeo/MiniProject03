@@ -59,19 +59,19 @@
             <Canvas Grid.Row="1">
                 <Image x:Name="Gear1" HorizontalAlignment="Left" VerticalAlignment="Top"
                        Height="100" Width="100"
-                       Source="/MRPAPP;component/Resources/gear.png" Canvas.Left="86" Canvas.Top="244"
+                       Source="/MRPAPP;component/Resources/gear.png" Canvas.Left="69" Canvas.Top="313"
                        ></Image>
                 <Image x:Name="Gear2" HorizontalAlignment="Left" VerticalAlignment="Top"
                        Height="100" Width="100"
-                       Source="/MRPAPP;component/Resources/gear.png" Canvas.Left="564" Canvas.Top="244"
+                       Source="/MRPAPP;component/Resources/gear.png" Canvas.Left="574" Canvas.Top="313"
                        ></Image>
 
                 <Image x:Name="Sensor" HorizontalAlignment="Left" VerticalAlignment="Top"
                        Height="100" Width="100"
-                       Source="/MRPAPP;component/Resources/sensor.png" Canvas.Left="520" Canvas.Top="62" RenderTransformOrigin="0.47,0.47"
+                       Source="/MRPAPP;component/Resources/sensor.png" Canvas.Left="526" Canvas.Top="62" RenderTransformOrigin="0.47,0.47"
                        ></Image>
-                <Image Source="/MRPAPP;component/Resources/belt.png" Canvas.Left="86" Canvas.Top="236" ></Image>
-                <Rectangle x:Name="Product" Height="50" Width="50" Canvas.Left="136" Canvas.Top="186"
+                <Image Source="/MRPAPP;component/Resources/belt.png" Canvas.Left="61" Canvas.Top="303" Width="623" ></Image>
+                <Rectangle x:Name="Product" Height="50" Width="50" Canvas.Left="119" Canvas.Top="253"
                            Stroke="Black" Fill="Gray" RenderTransformOrigin="0.58,0.84"></Rectangle>
             </Canvas>
 

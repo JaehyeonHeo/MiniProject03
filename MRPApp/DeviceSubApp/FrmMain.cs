@@ -1,15 +1,11 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
@@ -61,7 +57,7 @@ namespace DeviceSubApp
         private void Timer_Tick(object sender, EventArgs e)
         {
             LblResult.Text = sw.Elapsed.Seconds.ToString();
-            if (sw.Elapsed.Seconds >= 3) // 데이터를 받은지 3초가 경과하면,,,,
+            if (sw.Elapsed.Seconds >= 2) // 데이터를 받은지 2초가 경과하면,,,,
             {
                 // 스탑워치 종료, 리셋 후 데이터 읽기 작업 시작 !
                 sw.Stop();
@@ -84,13 +80,12 @@ namespace DeviceSubApp
                 {
                     var prcResult = correctData["PRC_MSG"] == "OK" ? 1 : 0; // OK면 1저장, FAIL이면 0저장
                     // DB에서 마지막 값을 계속 수정하는 쿼리문 
-                    string strUpQry = $"UPDATE Process_DEV " +
-                                        $" SET PrcEndTime = '{DateTime.Now.ToString("HH:mm:ss")}'" +
-                                         $"  , PrcResult = '{prcResult}'" +
+                    string strUpQry = $"UPDATE Process" +
+                                        $" SET PrcResult = '{prcResult}'" +
                                          $"  , ModDate = '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}'" +
                                          $"  , ModID = '{"SYS"}'" +
                                      $"  WHERE PrcIdx = " +
-                                     $"  (SELECT TOP 1 PrcIdx FROM Process_DEV ORDER BY PrcIdx DESC)";
+                                     $"  (SELECT TOP 1 PrcIdx FROM Process ORDER BY PrcIdx DESC)";
                     try
                     {
                         conn.Open();
@@ -110,7 +105,6 @@ namespace DeviceSubApp
                     }
                 }
             }
-
             iotData.Clear(); // DB 저장후 iotData에 있는 데이터 모두 삭제
         }
 
