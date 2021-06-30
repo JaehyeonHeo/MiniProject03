@@ -9,6 +9,8 @@
 ```
 ![공정모니터링 화면](MRPApp/ProcessView.png "실행화면")
 
+![공정계획 화면](MRPApp/ScheduleList.png "실행화면")
+
 ```C#
 using Newtonsoft.Json;
 using System;
