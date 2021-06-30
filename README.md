@@ -5,11 +5,12 @@
    라즈베리파이에서 publish한 data를 MRP앱에서 subscribe한다.
    
  - MRP앱에서는 공정계획, 공정모니터링, 리포트, 설정 등의 기능을 DB와 연결하여 data를 저장한다.
- 
 ```
 ![공정모니터링 화면](MRPApp/ProcessView.png "실행화면")
 
 ![공정계획 화면](MRPApp/ScheduleList.png "실행화면")
+
+## 공정모니터링화면(ProcessView) : C# 코드
 
 ```C#
 using Newtonsoft.Json;
