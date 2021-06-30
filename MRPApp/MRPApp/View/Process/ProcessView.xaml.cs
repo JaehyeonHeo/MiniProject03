@@ -78,7 +78,7 @@ namespace MRPApp.View.Process
                 throw ex;
             }
         }
-
+        // 전역변수 선언
         MqttClient client;
         Timer timer = new Timer();
         Stopwatch sw = new Stopwatch();
