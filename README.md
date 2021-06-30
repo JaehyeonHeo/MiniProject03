@@ -7,7 +7,7 @@
  - MRP앱에서는 공정계획, 공정모니터링, 리포트, 설정 등의 기능을 DB와 연결하여 data를 저장한다.
  
 ```
-![SocketProgramming](https://raw.githubusercontent.com/JaehyeonHeo/SocketProgramming/7c0044757a88b916aab45cfb306923a59716dc6d/image/TcpImage.jpg "실행화면")
+![공정모니터링 화면](MRPApp/ProcessView.png "실행화면")
 
 ```C#
 using Newtonsoft.Json;
