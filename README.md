@@ -8,8 +8,11 @@
 ```
 #### <공정모니터링 페이지>
 ![공정모니터링 화면](MRPApp/ProcessView.png "실행화면")
+#### <리포트 페이지>
+![리포트 화면](https://github.com/JaehyeonHeo/MiniProject_SimpleMRP/blob/main/MRPApp/reportView.png "실행화면")
 #### <공정계획 페이지>
 ![공정계획 화면](MRPApp/ScheduleList.png "실행화면")
+
 
 ## 공정모니터링화면(ProcessView) : C# 코드
 
