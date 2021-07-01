@@ -287,5 +287,7 @@ namespace MRPApp.View.Process
             if (client.IsConnected) client.Disconnect();
             timer.Dispose();
         }
+
+        
     }
 }

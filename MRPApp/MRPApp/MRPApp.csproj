@@ -239,6 +239,7 @@
     <Compile Include="Model\Process.cs">
       <DependentUpon>MRPModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Report.cs" />
     <Compile Include="Model\Schedules.cs">
       <DependentUpon>MRPModel.tt</DependentUpon>
     </Compile>
@@ -256,18 +257,6 @@
     </Compile>
     <Compile Include="View\Setting\SettingList.xaml.cs">
       <DependentUpon>SettingList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Store\AddStore.xaml.cs">
-      <DependentUpon>AddStore.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Account\EditAccount.xaml.cs">
-      <DependentUpon>EditAccount.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Store\StoreList.xaml.cs">
-      <DependentUpon>StoreList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Account\MyAccount.xaml.cs">
-      <DependentUpon>MyAccount.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -297,22 +286,6 @@
     <Page Include="View\Setting\SettingList.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Store\AddStore.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Account\EditAccount.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Store\StoreList.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Account\MyAccount.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

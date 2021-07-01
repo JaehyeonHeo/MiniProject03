@@ -1,22 +1,8 @@
 ﻿using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using MRPApp.View;
-using MRPApp.View.Account;
-using MRPApp.View.Store;
 using MRPApp.View.Setting;
 using MRPApp.View.Schedule;
 using System.Configuration;
@@ -62,18 +48,7 @@ namespace MRPApp
             }
         }
 
-        private async void BtnAccount_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                ActiveControl.Content = new MyAccount();
-            }
-            catch (Exception ex)
-            {
-                Commons.LOGGER.Error($"예외발생 BtnAccount_Click : {ex}");
-                await this.ShowMessageAsync("예외", $"예외발생 : {ex}");
-            }
-        }
+        
 
         private async void BtnUser_Click(object sender, RoutedEventArgs e)
         {
