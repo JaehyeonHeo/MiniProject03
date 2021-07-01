@@ -19,12 +19,38 @@ namespace MRPApp.View.Report
             try
             {
                 InitControls();
+
+                DisplayChart();
             }
             catch (Exception ex)
             {
                 Commons.LOGGER.Error($"예외발생 ReportView Loaded : {ex}");
                 throw ex;
             }
+        }
+
+        // 차트 관련 메서드
+        private void DisplayChart()
+        {
+            // 차트에 들어갈 무작위 데이터 생성 (Y축에 들어갈 값), x축에는 날짜
+            double[] ys1 = new double[] { 10.4, 34.6, 22.1, 15.4, 40.0 };
+            double[] ys2 = new double[] { 9.7, 8.3, 2.6, 3.4, 7.7 };
+            // 변수에 차트에 맞는 형식으로 값 저장
+            var series1 = new LiveCharts.Wpf.ColumnSeries
+            {
+                Title = "First Val",
+                Values = new LiveCharts.ChartValues<double>(ys1)
+            };
+            var series2 = new LiveCharts.Wpf.ColumnSeries
+            {
+                Title = "Second Val",
+                Values = new LiveCharts.ChartValues<double>(ys2)
+            };
+
+            // 차트에 할당
+            ChtReport.Series.Clear();
+            ChtReport.Series.Add(series1);
+            ChtReport.Series.Add(series2);
         }
 
         private void InitControls()
